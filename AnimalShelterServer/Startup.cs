@@ -72,7 +72,7 @@ namespace AnimalShelterServer
              {
                  routes.MapRoute(
                      name: "default",
-                     template: "{controller=Messages}/{action=Index}/{id?}");
+                     template: "{controller}/{action=Index}/{id?}");
              });
         }
     }

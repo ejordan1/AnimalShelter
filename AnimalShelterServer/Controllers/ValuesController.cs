@@ -4,7 +4,7 @@
 // using System.Threading.Tasks;
 // using Microsoft.AspNetCore.Mvc;
 
-// namespace MessagesServer.Solution.Controllers
+// namespace AnimalShelterServer.Solution.Controllers
 // {
 //     [Route("api/[controller]")]
 //     [ApiController]
