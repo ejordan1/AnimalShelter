@@ -25,16 +25,16 @@ namespace AnimalShelterServer.Controllers
 
         // GET api/animals
         [HttpGet]
-        public ActionResult<IEnumerable<Message>> Get()
+        public ActionResult<IEnumerable<Animal>> Get()
         {
             return _db.Animals.ToList();
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] Message message)
+        public void Post([FromBody] Animal animal)
         {
-            _db.Animals.Add(message);
+            _db.Animals.Add(animal);
             _db.SaveChanges();
         }
 

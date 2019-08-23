@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AnimalShelterServer.Models
 {
-    public class AnimalSheterServerContext : DbContext
+    public class AnimalShelterServerContext : DbContext
     {
-        public AnimalSheterServerContext(DbContextOptions<AnimalSheterServerContext> options)
+        public AnimalShelterServerContext(DbContextOptions<AnimalShelterServerContext> options)
             : base(options)
         {
         }
