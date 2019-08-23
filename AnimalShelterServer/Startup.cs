@@ -11,9 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 
-using MessagesServer.Models;
+using AnimalShelterServer.Models;
 
-namespace MessagesServer
+namespace AnimalShelterServer
 {
     public class Startup
     {
@@ -39,14 +39,14 @@ namespace MessagesServer
 
             // Use SQL Database if in Azure, otherwise, use SQLite
             if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
-                services.AddDbContext<MessagesServerContext>(options =>
+                services.AddDbContext<AnimalShelterServerContext>(options =>
                         options.UseSqlServer(Configuration.GetConnectionString("MyDbConnection")));
             else
-                services.AddDbContext<MessagesServerContext>(options =>
+                services.AddDbContext<AnimalShelterServerContext>(options =>
                         options.UseSqlite("Data Source=localdatabase.db"));
 
             // Automatically perform database migration
-            services.BuildServiceProvider().GetService<MessagesServerContext>().Database.Migrate();
+            services.BuildServiceProvider().GetService<AnimalShelterServerContext>().Database.Migrate();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

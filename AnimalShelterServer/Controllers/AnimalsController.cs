@@ -16,7 +16,6 @@ namespace AnimalShelterServer.Controllers
     {
 
         private readonly AnimalShelterServerContext _db;
-        // = new AnimalShelterServerContext();
 
         public AnimalsController(AnimalShelterServerContext db)
         {
